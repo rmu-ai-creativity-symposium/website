@@ -358,6 +358,14 @@ main {
   color: var(--site--main--color--03-01);
 }
 
+.panel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid rgba(29, 74, 91, 0.2);
+  display: block;
+}
+
 .panel-title {
   font-weight: 700;
   font-size: 16px;
@@ -412,8 +420,48 @@ main {
 }
 
 @media (max-width: 640px) {
+  .page {
+    padding: 0 16px 60px;
+  }
+
   header {
     padding: 18px 0 38px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .meta {
+    gap: 10px;
+  }
+
+  .meta span {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: clamp(28px, 8vw, 38px);
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .actions {
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .slot {
@@ -424,7 +472,42 @@ main {
     color: #1f2937;
   }
 
+  .section-title {
+    font-size: 16px;
+  }
+
+  .panel-image {
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
   .organizers {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .topbar .meta {
+    display: none;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .slot {
+    grid-template-columns: 70px 1fr;
+  }
+
+  .organizers {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
